@@ -1,0 +1,80 @@
+/* Global container to center app content */
+.app-container {
+   max-width: 1200px;
+     margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Common page title styling */
+  .page-title {
+    margin-bottom: 2rem;
+     color: var(--primary); /* Uses the CSS variable from root */
+  }
+  
+  /* Reusable button styling */
+  .button {
+   background-color: var(--primary);
+     color: white;
+   border: none;
+     padding: 0.5rem 1rem;
+   border-radius: 4px;
+     cursor: pointer;
+   font-size: 1rem;
+     transition: background-color 0.2s;
+  }
+
+  /* Hover effect for buttons */
+  .button:hover {
+    background-color: var(--primary-light);
+  }
+
+  /* Spacing and structure for form elements */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  /* Label styling inside form groups */
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  /* Input, textarea, select fields inside forms */
+  .form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  /* Validation error message */
+  .error-message {
+    color: #dc3545; /* Bootstrap's red for errors */
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+
+  /* Status styles for watering indicators */
+  .watering-status {
+    display: flex;
+     align-items: center;
+    gap: 0.5rem;
+     margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .watering-status.due {
+     color: #dc3545; /* Red for overdue */
+  }
+
+  .watering-status.soon {
+      color: #ffc107; /* Yellow for upcoming */
+  }
+
+  .watering-status.ok {
+     color: #28a745; /* Green for good */
+  }
+
+                                                        
