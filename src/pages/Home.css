@@ -1,41 +1,39 @@
-/* Home.css */
-                                        
-/* Main container for the home screen */
+/* Container for the home page */
 .home {
     padding: 2rem;
-     background: linear-gradient(135deg, #f0fdf4, #e0f7e9);
-   min-height: 100vh;
-     font-family: 'Segoe UI', sans-serif;
-    color: #2e7d32;
-}   
+    background: linear-gradient(135deg, #f0fdf4, #e0f7e9); /* Soft green gradient */
+    min-height: 100vh; /* Full viewport height */
+    font-family: 'Segoe UI', sans-serif; /* Clean font */
+    color: #2e7d32; /* Main text color */
+}
 
-/* Page heading styling */
+/* Main heading styling */
 .home h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    color: #1b5e20;
-}   
+    color: #1b5e20; /* Darker green */
+}
 
-/* Styles for loading and error messages */
+/* Common styles for loading and error messages */
 .loading,
 .error {
-  text-align: center;
-     font-size: 1.2rem;
+    text-align: center;
+    font-size: 1.2rem;
     margin-top: 5rem;
-   color: #d32f2f;
-}   
+    color: #d32f2f; /* Red for visibility */
+}
 
-/* When there are no plants to display */
+/* Styling for the empty state message box */
 .empty-state {
     text-align: center;
-     padding: 3rem;
-     background-color: #ffffff;
- border: 2px dashed #81c784;
-     border-radius: 16px;
+    padding: 3rem;
+    background-color: #ffffff;
+    border: 2px dashed #81c784; /* Light green dashed border */
+    border-radius: 16px;
     max-width: 500px;
-     margin: 4rem auto;
-    box-shadow: 0 8px 24px rgba(0, 128, 0, 0.1);
+    margin: 4rem auto;
+    box-shadow: 0 8px 24px rgba(0, 128, 0, 0.1); /* Subtle shadow */
 }
 
 /* Text inside the empty state box */
@@ -44,41 +42,41 @@
     margin-bottom: 1.5rem;
 }
 
-/* Button inside the empty state */
+/* Button styling inside the empty state */
 .empty-state .button {
-     background-color: #66bb6a;
+    background-color: #66bb6a; /* Green button */
     color: white;
-     padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
-   border: none;
-     border-radius: 12px;
-     text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
-                        
+
 /* Button hover effect */
 .empty-state .button:hover {
-      background-color: #388e3c;
+    background-color: #388e3c; /* Darker green on hover */
 }
 
-/* Grid layout for plant cards */
+/* Grid layout for displaying plant cards */
 .plants-grid {
-     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-   gap: 2rem;
-     padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Responsive columns */
+    gap: 2rem;
+    padding: 2rem 0;
 }
 
-/* Individual plant card container */
+/* Individual plant card styling */
 .plant-container {
-     background-color: #ffffff;
+    background-color: #ffffff;
     padding: 1rem;
-      border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s ease-in-out;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    transition: transform 0.2s ease-in-out; /* Smooth animation */
 }
 
-/* Slight lift effect on hover */
+/* Plant card hover effect */
 .plant-container:hover {
- transform: translateY(-5px);
+    transform: translateY(-5px); /* Slight lift on hover */
 }

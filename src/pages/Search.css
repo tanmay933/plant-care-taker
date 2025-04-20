@@ -5,7 +5,7 @@
     --input-border: #c8e6c9;          /* Light green border for input */
     --input-focus: rgba(46, 125, 50, 0.2); /* Soft glow when input is focused */
   }
-
+  
   /* === Search Page Wrapper === */
   .search-page {
     max-width: 1200px;                /* Limit page width for readability */
@@ -14,7 +14,7 @@
     background-color: #f0fdf4;        /* Very light green background */
     font-family: 'Segoe UI', sans-serif;  /* Clean, modern font */
   }
-
+  
   /* === Page Heading === */
   .search-page h1 {
     color: var(--primary);            /* Use theme green */
@@ -22,7 +22,7 @@
     margin-bottom: 2rem;
     text-align: center;
   }
-
+  
   /* === Search Input Styling === */
   .search-page input {
     width: 100%;                      /* Full width */
@@ -37,14 +37,14 @@
     box-shadow: 0 2px 6px rgba(0, 128, 0, 0.05); /* Subtle shadow */
     transition: all 0.2s ease;        /* Smooth focus animation */
   }
-
+  
   /* === Input Focus Effect === */
   .search-page input:focus {
     outline: none;
     border-color: var(--primary);     /* Highlight border */
     box-shadow: 0 0 0 4px var(--input-focus); /* Soft green glow */
   }
-
+  
   /* === Info Text: No Results / Loading === */
   .no-results,
   .loading-text {
@@ -53,7 +53,7 @@
     font-size: 1.2rem;
     color: #777;                      /* Muted grey for neutral tone */
   }
-
+  
   /* === Grid for Showing Plant Cards === */
   .plants-grid {
     display: grid;
@@ -61,13 +61,13 @@
     gap: 2rem;                        /* Space between cards */
     margin-top: 2rem;
   }
-
+  
   /* === Responsive Tweaks for Mobile Screens === */
   @media (max-width: 768px) {
     .search-page {
       padding: 2rem 1rem;             /* Reduce padding on smaller screens */
     }
-
+  
     .search-page input {
       max-width: 100%;                /* Input stretches full width */
     }
@@ -76,5 +76,4 @@
       grid-template-columns: 1fr;     /* Stack cards vertically on small screens */
     }
   }
-
-                
+  

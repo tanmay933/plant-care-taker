@@ -1,0 +1,69 @@
+/* Watering Progress Container */
+.watering-progress {
+    margin: 1rem 0;
+     padding: 0.5rem;
+    background-color: #f8f9fa;
+     border-radius: 8px;
+   }
+   
+   /* Progress Bar Container */
+   .progress-bar-container {
+      width: 100%;
+     height: 10px;
+      background-color: #e9ecef;
+     border-radius: 5px;
+      overflow: hidden;
+     margin-bottom: 0.5rem;
+   }
+   
+   /* Progress Bar */
+   .progress-bar {
+      height: 100%;
+    transition: width 0.3s ease;
+   }
+   
+   /* Status Colors */
+   .progress-bar.ok {
+      background-color: #28a745;
+   }
+   
+   .progress-bar.soon {
+    background-color: #ffc107;
+   }
+   
+   .progress-bar.due {
+   background-color: #dc3545;
+   }
+   
+   /* Status Text */
+   .watering-status {
+      display: flex;
+     justify-content: space-between;
+    font-size: 0.9rem;
+      padding: 0.25rem 0;
+   }
+   
+   .watering-status.ok {
+      color: #28a745;
+   }
+   
+   .watering-status.soon {
+  color: #ffc107;
+   }
+   
+   .watering-status.due {
+   color: #dc3545;
+      font-weight: bold;
+   }
+   
+   /* Responsive adjustments */
+   @media (max-width: 768px) {
+     .watering-status {
+        flex-direction: column;
+       gap: 0.25rem;
+     }
+     
+     .watering-status span {
+         width: 100%;
+     }
+   }

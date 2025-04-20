@@ -1,38 +1,42 @@
-import { usePlants } from '../context/PlantContext'; // brings in plant context state (myPlants, loading, error)
- import PlantCard from '../components/PlantCard'; // displays plant details
-  import WateringProgress from '../components/WateringProgress'; // visual watering progress tracker
-import './Home.css';  // styles for this page
+// Importing custom hook for plant data and components
+import { usePlants } from '../context/PlantContext';
+import PlantCard from '../components/PlantCard';
+import WateringProgress from '../components/WateringProgress';
+import './Home.css';
 
 const Home = () => {
-   const { myPlants, loading, error } = usePlants(); // grab the current plant list + loading/error states
+  // Accessing context values: plant list, loading state, and error (if any)
+  const { myPlants, loading, error } = usePlants();
 
-  // Show  loading message while data is being fetched
+  // If data is still being fetched, show loading message
   if (loading) {
-     return <div className="loading">Loading your plants...</div>;
+    return <div className="loading">Loading your plants...</div>;
   }
 
-  // If  something went wrong fetching plants
+  // If there was an error while fetching, show error message
   if (error) {
-     return <div className="error">Error: {error}</div>;
+    return <div className="error">Error: {error}</div>;
   }
 
   return (
     <div className="home">
       <h1>Your Plant Collection</h1>
 
-      {/* If no plants have been added yet */}
+      {/* If no plants exist, show an empty state with a link to add plants */}
       {myPlants.length === 0 ? (
         <div className="empty-state">
           <p>No plants yet. Add your first plant!</p>
           <a href="/add" className="button">Add Plant</a>
         </div>
       ) : (
-     // Show all user plants in a grid layout
+        // If plants are available, render them in a grid
         <div className="plants-grid">
           {myPlants.map((plant) => (
             <div key={plant.id} className="plant-container">
-              <PlantCard plant={plant} /> {/* shows plant name, species etc. */}
-              <WateringProgress plant={plant} /> {/* visual progress based on watering frequency */}
+              {/* Individual plant card */}
+              <PlantCard plant={plant} />
+              {/* Visual watering progress indicator */}
+              <WateringProgress plant={plant} />
             </div>
           ))}
         </div>
@@ -41,4 +45,4 @@ const Home = () => {
   );
 };
 
-    export default Home;
+export default Home;

@@ -1,122 +1,108 @@
-/* Container for the full plant details page */
 .plant-details-container {
-     max-width: 800px;    /* keep it nicely centered on larger screens */
+    max-width: 800px;
     margin: 0 auto;
-     padding: 2rem;
-}
-
-/* Top section with plant name + button */
-.plant-header {
-     display: flex;
-    justify-content: space-between;
-     align-items: center;
-    margin-bottom: 2rem;
-     padding-bottom: 1rem;
-    border-bottom: 1px solid #eee; /* subtle separation line */
-}
-
-
-.plant-header h1 {
-    color: #2e7d32; /* deep green for the heading */
-     margin: 0;
-}
-
-/* Watering button styles */
-.water-btn {
-    background-color: #2e7d32; /* same green as heading */
-     color: white;
-    border: none;
-     padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-     font-size: 1rem;
-    cursor: pointer;
-     transition: background-color 0.3s;
-}
-
-
-.water-btn:hover {
-     background-color: #1b5e20; /* darker green on hover */
-}
-
-/* Layout for the details content */
-.plant-content {
-     display: flex;
-    gap: 2rem;
-}
-
-/* Left side (meta info like species, date added, etc.) */
-.plant-meta {
-     flex: 1;
-}
-
-/* Right side (main care guide, notes etc.) */
-.care-details {
-     flex: 2;
-}
-
-/* Section blocks inside meta and care-details */
-.detail-section {
-     margin-bottom: 2rem;
-}
-
-.detail-section h3 {
-    color: #2e7d32;
-     margin-bottom: 1rem;
-    border-bottom: 1px solid #eee;
-     padding-bottom: 0.5rem;
-}
-
-/* Each line showing one piece of info like “Sunlight: Full” */
-.detail-item {
-    display: flex;
-     margin-bottom: 0.75rem;
-}
-
-/* Label part like "Watering:" */
-.detail-label {
-    font-weight: 500;
-     min-width: 120px;
-    color: #555;
-}
-
-/* Notes box with user-written plant care notes */
-.plant-notes {
-    background: #f8f9fa;
-     padding: 1rem;
-    border-radius: 4px;
-     line-height: 1.6;
-}
-
-/* Page shown when the plant is not found */
-.not-found {
-     text-align: center;
     padding: 2rem;
-     max-width: 600px;
+  }
+  
+  .plant-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .plant-header h1 {
+    color: #2e7d32;
+    margin: 0;
+  }
+  
+  .water-btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .water-btn:hover {
+    background-color: #1b5e20;
+  }
+  
+  .plant-content {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .plant-meta {
+    flex: 1;
+  }
+  
+  .care-details {
+    flex: 2;
+  }
+  
+  .detail-section {
+    margin-bottom: 2rem;
+  }
+  
+  .detail-section h3 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+  
+  .detail-item {
+    display: flex;
+    margin-bottom: 0.75rem;
+  }
+  
+  .detail-label {
+    font-weight: 500;
+    min-width: 120px;
+    color: #555;
+  }
+  
+  .plant-notes {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    line-height: 1.6;
+  }
+  
+  .not-found {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
     margin: 0 auto;
-}
-
-.not-found h2 {
-    color: #dc3545; /* red for error message */
-}
-
-/* Responsive tweaks for smaller screens */
-@media (max-width: 768px) {
+  }
+  
+  .not-found h2 {
+    color: #dc3545;
+  }
+  
+  @media (max-width: 768px) {
     .plant-content {
-         flex-direction: column; /* stack meta and care sections vertically */
+      flex-direction: column;
     }
-
+    
     .plant-header {
-        flex-direction: column;
-         align-items: flex-start;
-        gap: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
     }
-
+    
     .detail-item {
-     flex-direction: column;
-        gap: 0.25rem;
+      flex-direction: column;
+      gap: 0.25rem;
     }
-
+    
     .detail-label {
-          min-width: auto; /* let labels adapt on smaller screens */
+      min-width: auto;
     }
-}
+  }

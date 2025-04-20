@@ -1,17 +1,16 @@
 import { useState } from 'react'
-// import './PlantForm.css'
-
-const PlantForm = ({ initialData = {}, onSubmit })=> {
+              
+const PlantForm = ({ initialData = {}, onSubmit }) => {
   const [formData, setFormData] = useState({
     name: initialData.name || '',
-     species: initialData.species || '',
+    species: initialData.species || '',
     wateringFrequency: initialData.wateringFrequency || '7',
-     sunlight: initialData.sunlight || 'partial',
+    sunlight: initialData.sunlight || 'partial',
     notes: initialData.notes || ''
   })
-  const [errors, setErrors] = useState({})
+    const [errors, setErrors] = useState({})
 
-  const handleChange = (e) => {
+  const handleChange = (e)=>  {
     const { name, value } = e.target
     setFormData({
       ...formData,
@@ -19,19 +18,19 @@ const PlantForm = ({ initialData = {}, onSubmit })=> {
     })
   }
 
-  const validateForm = ()=> {
+  const validateForm = ()  =>{
     const newErrors = {}
-   if (!formData.name.trim()) newErrors.name = 'Plant name is required'
-    if (!formData.species.trim()) newErrors.species = 'Species is required'
-    if (isNaN(formData.wateringFrequency) || formData.wateringFrequency < 1) {
-       newErrors.wateringFrequency = 'Enter a valid number (minimum 1)'
+    if (!formData.name.trim())  newErrors.name = 'Plant name is required'
+    if  (!formData.species.trim()) newErrors.species = 'Species is required'
+    if(isNaN(formData.wateringFrequency) || formData.wateringFrequency < 1) {
+      newErrors.wateringFrequency = 'Enter a valid number (minimum 1)'
     }
     setErrors(newErrors)
-    return Object.keys(newErrors).length ===  0
+     return Object.keys(newErrors).length === 0
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+      e.preventDefault()
     if (validateForm()) {
       onSubmit(formData)
     }
@@ -40,13 +39,13 @@ const PlantForm = ({ initialData = {}, onSubmit })=> {
   return (
     <form onSubmit={handleSubmit} className="plant-form">
       <div className="form-group">
-         <label htmlFor="name">Plant Name *</label>
+        <label htmlFor="name">Plant Name *</label>
         <input
-           type="text"
+        type="text"
           id="name"
-            name="name"
+           name="name"
           value={formData.name}
-           onChange={handleChange}
+          onChange={handleChange}
           className={`form-control ${errors.name ? 'is-invalid' : ''}`}
         />
         {errors.name && <div className="error-message">{errors.name}</div>}
@@ -60,33 +59,33 @@ const PlantForm = ({ initialData = {}, onSubmit })=> {
           name="species"
            value={formData.species}
           onChange={handleChange}
-           className={`form-control ${errors.species ? 'is-invalid' : ''}`}
+          className={`form-control ${errors.species ? 'is-invalid' : ''}`}
         />
         {errors.species && <div className="error-message">{errors.species}</div>}
       </div>
-
+   
       <div className="form-group">
         <label htmlFor="wateringFrequency">Watering Frequency (days) *</label>
         <input
           type="number"
            id="wateringFrequency"
           name="wateringFrequency"
-          min="1"
-           value={formData.wateringFrequency}
+         min="1"
+          value={formData.wateringFrequency}
           onChange={handleChange}
-           className={`form-control ${errors.wateringFrequency ? 'is-invalid' : ''}`}
+          className={`form-control ${errors.wateringFrequency ? 'is-invalid' : ''}`}
         />
         {errors.wateringFrequency && (
-          <div className="error-message">{errors.wateringFrequency}</div>
+        <div className="error-message">{errors.wateringFrequency}</div>
         )}
       </div>
-
+         
       <div className="form-group">
         <label htmlFor="sunlight">Sunlight Requirements</label>
         <select
            id="sunlight"
           name="sunlight"
-           value={formData.sunlight}
+        value={formData.sunlight}
           onChange={handleChange}
            className="form-control"
         >
@@ -99,11 +98,11 @@ const PlantForm = ({ initialData = {}, onSubmit })=> {
       <div className="form-group">
         <label htmlFor="notes">Notes</label>
         <textarea
-          id="notes"
+           id="notes"
           name="notes"
-           value={formData.notes}
-          onChange={handleChange}
-           className="form-control"
+         value={formData.notes}
+           onChange={handleChange}
+        className="form-control"
           rows="3"
         />
       </div>
@@ -115,4 +114,4 @@ const PlantForm = ({ initialData = {}, onSubmit })=> {
   )
 }
 
-export default PlantForm
+   export default PlantForm

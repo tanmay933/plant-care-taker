@@ -116,7 +116,7 @@ const AddPlant = () => {
             <span className="error-message">{errors.wateringFrequency}</span>
           )}
         </div>
-          
+
         {/* Sunlight Requirement Field */}
         <div className="form-group">
           <label htmlFor="sunlight">Sunlight Requirements</label>
