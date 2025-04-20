@@ -1,0 +1,80 @@
+/* === Global CSS Variables === */
+:root {
+    --primary: #2e7d32;               /* A strong green, used as the theme's main color */
+    --input-bg: #f9fdf9;              /* Soft background for input field */
+    --input-border: #c8e6c9;          /* Light green border for input */
+    --input-focus: rgba(46, 125, 50, 0.2); /* Soft glow when input is focused */
+  }
+
+  /* === Search Page Wrapper === */
+  .search-page {
+    max-width: 1200px;                /* Limit page width for readability */
+    margin: 0 auto;                   /* Center it horizontally */
+    padding: 3rem 2rem;               /* Generous padding for breathing room */
+    background-color: #f0fdf4;        /* Very light green background */
+    font-family: 'Segoe UI', sans-serif;  /* Clean, modern font */
+  }
+
+  /* === Page Heading === */
+  .search-page h1 {
+    color: var(--primary);            /* Use theme green */
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  /* === Search Input Styling === */
+  .search-page input {
+    width: 100%;                      /* Full width */
+    max-width: 550px;                 /* But don't stretch too far */
+    margin: 0 auto 2rem auto;         /* Center horizontally, add space below */
+    display: block;
+    padding: 0.85rem 1.2rem;
+    border: 1px solid var(--input-border);
+    border-radius: 12px;              /* Nicely rounded edges */
+    font-size: 1rem;
+    background-color: var(--input-bg);
+    box-shadow: 0 2px 6px rgba(0, 128, 0, 0.05); /* Subtle shadow */
+    transition: all 0.2s ease;        /* Smooth focus animation */
+  }
+
+  /* === Input Focus Effect === */
+  .search-page input:focus {
+    outline: none;
+    border-color: var(--primary);     /* Highlight border */
+    box-shadow: 0 0 0 4px var(--input-focus); /* Soft green glow */
+  }
+
+  /* === Info Text: No Results / Loading === */
+  .no-results,
+  .loading-text {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #777;                      /* Muted grey for neutral tone */
+  }
+
+  /* === Grid for Showing Plant Cards === */
+  .plants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive cards */
+    gap: 2rem;                        /* Space between cards */
+    margin-top: 2rem;
+  }
+
+  /* === Responsive Tweaks for Mobile Screens === */
+  @media (max-width: 768px) {
+    .search-page {
+      padding: 2rem 1rem;             /* Reduce padding on smaller screens */
+    }
+
+    .search-page input {
+      max-width: 100%;                /* Input stretches full width */
+    }
+  
+    .plants-grid {
+      grid-template-columns: 1fr;     /* Stack cards vertically on small screens */
+    }
+  }
+
+                
