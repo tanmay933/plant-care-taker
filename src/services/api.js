@@ -1,6 +1,6 @@
 export const searchPlants = async (query) => {
-    const API_BASE_URL = 'https://perenual.com/api';
-    const PLANT_API_KEY = 'sk-BL9s6804849e2bf979907';
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+    const PLANT_API_KEY = import.meta.env.VITE_PLANT_API_KEY;
   
     if (!query.trim()) return { data: [] };
   
