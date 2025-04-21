@@ -2,6 +2,7 @@
 import { usePlants } from '../context/PlantContext';
 import PlantCard from '../components/PlantCard';
 import WateringProgress from '../components/WateringProgress';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
@@ -26,7 +27,7 @@ const Home = () => {
       {myPlants.length === 0 ? (
         <div className="empty-state">
           <p>No plants yet. Add your first plant!</p>
-          <a href="/add" className="button">Add Plant</a>
+          <Link to="/add" className="button">Add Plant</Link>
         </div>
       ) : (
         // If plants are available, render them in a grid
